@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Yanone+Kaffeesatz:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota:wght@300;400&display=swap');
+
+html {
+  scrollbar-width: thin;
+}
+
+body {
+  margin: 0;
+  font-family: 'Jura', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+div,
+p,
+span {
+  user-select: none;
+}
+
+code {
+  font-family: 'JetBrains Mono', Consolas, Menlo, source-code-pro, Monaco,
+    monospace;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2px 4px;
+  /* font-size: 36px !important; */
+}
+
+div.slide__content > div:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+pre {
+  padding-right: 50px !important;
+}
+
+pre > code {
+  background-color: initial;
+  padding: initial;
+  font-size: 28px !important;
+}
+
+div.sm > pre > code {
+  font-size: 18px !important;
+}
+
+div.xs > pre > code {
+  font-size: 14px !important;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 105;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.slide--first {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(305deg, #dc04c69b, rgb(75, 72, 219));
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  background-color: #fc6986;
+  border-radius: 100px;
+}
