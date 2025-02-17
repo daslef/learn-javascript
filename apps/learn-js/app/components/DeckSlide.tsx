@@ -1,5 +1,5 @@
 import { FlexBox, Slide } from 'spectacle';
-import { SlideHeader } from './';
+import { SlideHeader } from '.';
 
 export const DeckSlide = ({
   heading = '',
