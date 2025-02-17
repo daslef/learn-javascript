@@ -13,7 +13,7 @@ const BooleanDescription = () => (
     <CodePane
       theme={tomorrow}
       language="javascript"
-      style={{ padding: '8px 16px', margin: '8px 16px' }}
+    // style={{ padding: '8px 16px', margin: '8px 16px' }}
     >
       {`
       let inProgress = true;
@@ -36,8 +36,8 @@ const NumberDescription = () => (
     <CodePane
       theme={tomorrow}
       language="javascript"
-      style={{ padding: '8px 16px', margin: '8px 16px' }}
-      // className="sm"
+    // style={{ padding: '8px 16px', margin: '8px 16px' }}
+    // className="sm"
     >{`
     let num = 100;
     const discount = 12.5; 
@@ -52,8 +52,8 @@ const StringDescription = () => (
     <CodePane
       theme={tomorrow}
       language="javascript"
-      style={{ padding: '0px 16px 0 16px', margin: '0px 0 0 16px' }}
-      className="sm"
+    // style={{ padding: '0px 16px 0 16px', margin: '0px 0 0 16px' }}
+    // className="sm"
     >{`
     const lang = 'JavaScript';
     console.log('I speak' + lang) // ?
@@ -83,7 +83,7 @@ const NullDescription = () => (
     <CodePane
       theme={tomorrow}
       language="javascript"
-      style={{ padding: '8px 16px 0 16px', margin: '8px 0 0 16px' }}
+    // style={{ padding: '8px 16px 0 16px', margin: '8px 0 0 16px' }}
     >{`
     let serverResponse = null;
     console.log(typeof serverResponse) // null
@@ -104,7 +104,7 @@ const UndefinedDescription = () => (
     <CodePane
       theme={tomorrow}
       language="javascript"
-      style={{ padding: '8px 16px 0 16px', margin: '8px 0 0 16px' }}
+    // style={{ padding: '8px 16px 0 16px', margin: '8px 0 0 16px' }}
     >{`
     let x;
     console.log(x);        // undefined

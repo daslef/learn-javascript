@@ -20,7 +20,7 @@ import {
 
 import { DeckSlide, SlideCodePane } from '../../../components';
 
-import { ReactComponent as ArrowSvg } from '../../../assets/svg/arrow.svg';
+import ArrowSvg from '../../../assets/svg/arrow.svg';
 
 const SlideNotes = () => (
   <Notes>

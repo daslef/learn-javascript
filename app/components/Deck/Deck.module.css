@@ -1,0 +1,94 @@
+.Card,
+.CardPractice {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  background-color: rgba(240, 240, 238, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+.CardPractice {
+  border-color: rgba(138, 43, 226, 0.1);
+  background-color: rgba(43, 226, 116, 0.05);
+}
+
+.Card_header,
+.Card_main,
+.Card_footer {
+  font-family: Jura;
+  padding: 10px 20px;
+}
+
+.Card_header {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Card_main {
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.Card_cardTypes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Card_cardTypesList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.Card_cardTypesList>li {
+  padding: 0;
+  font-size: 32px;
+  line-height: 14px;
+  margin-right: 1px;
+}
+
+.Card_title {
+  margin: 0;
+  padding: 1.5rem 0;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  flex: 1;
+}
+
+.Card_footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 60px;
+}
+
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50%;
+  border: 0;
+  background-color: rgba(220, 220, 220, 0.1);
+}
+
+.Button:hover>svg {
+  stroke: rgb(49, 49, 183);
+  transform: scale(1.05);
+  transition: transform 0.1s ease-in-out;
+}
+
+.Card_title:hover,
+.Button:hover {
+  cursor: pointer;
+}

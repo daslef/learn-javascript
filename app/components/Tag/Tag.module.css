@@ -1,0 +1,10 @@
+.Tag {
+    background-color: rgba(34, 106, 34, 0.7);
+    padding: 4px 12px;
+    font-size: 14px;
+    line-height: 22px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    user-select: none;
+}

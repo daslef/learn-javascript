@@ -1,47 +1,33 @@
 {
   "name": "slides",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^13.0.0",
-    "@testing-library/user-event": "^13.2.1",
+    "@tanstack/react-router": "^1.105.0",
+    "@tanstack/start": "^1.105.3",
     "@tippyjs/react": "^4.2.6",
     "javascript-playgrounds": "^1.2.3",
-    "localforage": "^1.10.0",
-    "match-sorter": "^6.3.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-feather": "^2.0.10",
     "react-player": "^2.11.0",
-    "react-router-dom": "^6.4.0",
-    "react-scripts": "5.0.1",
-    "sort-by": "^1.2.0",
     "spectacle": "^9.6.0",
-    "web-vitals": "^2.1.0"
+    "vinxi": "^0.5.3"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@tanstack/router-devtools": "^1.105.0",
+    "@types/node": "^22.5.4",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.0",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }
