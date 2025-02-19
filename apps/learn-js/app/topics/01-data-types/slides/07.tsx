@@ -5,7 +5,7 @@ import {
   Notes,
   ListItem,
   Appear
-} from 'spectacle';
+} from '@repo/spectacle';
 import { DeckSlide } from '../../../components';
 
 const SlideNotes = () => (

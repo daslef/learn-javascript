@@ -1,4 +1,4 @@
-import { FlexBox, Heading, Slide } from 'spectacle';
+import { FlexBox, Heading, Slide } from '@repo/spectacle';
 
 export const DeckSection = ({
   heading = '',

@@ -1,0 +1,127 @@
+{
+  "name": "@repo/spectacle",
+  "version": "10.1.8",
+  "description": "ReactJS Powered Presentation Framework",
+  "main": "./src/index.ts",
+  "files": [
+    "lib/"
+  ],
+  "module": "./src/index.ts",
+  "author": "Formidable Labs <hello@formidable.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FormidableLabs/spectacle.git"
+  },
+  "browserslist": "> 0.25%, not dead",
+  "dependencies": {
+    "broadcast-channel": "^4.17.0",
+    "history": "^5.3.0",
+    "lodash.clonedeep": "^4.5.0",
+    "merge-anything": "^3.0.3",
+    "mousetrap": "^1.6.5",
+    "query-string": "^7.1.3",
+    "react-fast-compare": "^3.2.0",
+    "react-spring": "^9.5.5",
+    "react-swipeable": "^7.0.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "styled-components": "^5.3.6",
+    "styled-system": "5.1.5",
+    "use-resize-observer": "^9.0.2"
+  },
+  "peerDependencies": {
+    "react": ">=19.0.0",
+    "react-dom": ">=19.0.0"
+  },
+  "devDependencies": {
+    "@types/lodash.clonedeep": "^4.5.7",
+    "@types/mousetrap": "^1.6.8",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/react-syntax-highlighter": "^15.5.5",
+    "@types/styled-components": "^5.1.15",
+    "@types/styled-system": "^5.1.5",
+    "csstype": "^3.1.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tsup": "^6.7.0"
+  },
+  "scripts": {
+    "build": "wireit",
+    "build:lib": "wireit",
+    "build:lib:watch": "wireit",
+    "lint": "wireit",
+    "lint:fix": "wireit",
+    "prettier": "wireit",
+    "prettier:fix": "wireit",
+    "types:check": "wireit",
+    "test": "wireit"
+  },
+  "publishConfig": {
+    "provenance": true
+  },
+  "wireit": {
+    "build": {
+      "dependencies": [
+        "build:lib"
+      ]
+    },
+    "build:lib": {
+      "command": "nps tsup",
+      "files": [
+        "./tsup.config.ts",
+        "src/**",
+        "!src/**/*.test.*",
+        "../../package-scripts.js",
+        "../../.babelrc.js",
+        "../../.babelrc.build.js"
+      ],
+      "output": [
+        "lib/**/*.js"
+      ],
+      "packageLocks": [
+        "pnpm-lock.yaml"
+      ]
+    },
+    "build:lib:watch": {
+      "command": "nps tsup:watch",
+      "files": [
+        "src/**",
+        "!src/**/*.test.*",
+        "../../package-scripts.js",
+        "../../.babelrc.js",
+        "../../.babelrc.build.js"
+      ],
+      "output": [
+        "lib/**/*.js"
+      ],
+      "packageLocks": [
+        "pnpm-lock.yaml"
+      ]
+    },
+    "types:check": {
+      "command": "nps types:check",
+      "files": [
+        "src/**/*.{ts,tsx}",
+        "../../tsconfig.json",
+        "tsconfig.json"
+      ],
+      "dependencies": [],
+      "output": [],
+      "packageLocks": [
+        "pnpm-lock.yaml"
+      ]
+    },
+    "test": {
+      "command": "nps jest",
+      "files": [
+        "src/**",
+        "../../.babelrc.js"
+      ],
+      "output": [],
+      "packageLocks": [
+        "pnpm-lock.yaml"
+      ]
+    }
+  }
+}

@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { CodePane } from 'spectacle';
+import { CodePane } from '@repo/spectacle';
 import Playground from 'javascript-playgrounds';
 
-import { ReactComponent as AcademicSvg } from '../assets/svg/academic.svg';
-import { ReactComponent as InteractiveSvg } from '../assets/svg/code-bracket.svg';
+import AcademicSvg from '../assets/svg/academic.svg?react';
+import InteractiveSvg from '../assets/svg/code-bracket.svg?react';
 
 import tomorrow from 'react-syntax-highlighter/dist/cjs/styles/prism/tomorrow';
 
@@ -68,8 +68,8 @@ export const SlideCodePane = ({
         <Playground
           style={{ width: '1000px', height: '600px', fontSize: 40 }}
           code={children}
-          // panes={['editor', 'console']}
-          // playground={{ enabled: true }}
+        // panes={['editor', 'console']}
+        // playground={{ enabled: true }}
         />
       </Modal>
     ) : (

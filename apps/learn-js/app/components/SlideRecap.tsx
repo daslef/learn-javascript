@@ -1,4 +1,4 @@
-import { Text, ListItem, OrderedList, Appear } from 'spectacle';
+import { Text, ListItem, OrderedList, Appear } from '@repo/spectacle';
 
 const Question = ({ text, itemFontSize = 44, codeSpanFontSize = 32 } = {}) => {
   const styledText = text.replaceAll(

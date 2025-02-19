@@ -1,4 +1,4 @@
-import { FullScreen, Progress, FlexBox } from 'spectacle';
+import { FullScreen, Progress, FlexBox } from '@repo/spectacle';
 
 export const theme = {
   fonts: {

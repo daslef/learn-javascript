@@ -1,4 +1,4 @@
-import { FlexBox, Heading } from 'spectacle';
+import { FlexBox, Heading } from '@repo/spectacle';
 
 const StyledText = ({ text, fontSize, codeSize, style }) => {
   const styledText = text

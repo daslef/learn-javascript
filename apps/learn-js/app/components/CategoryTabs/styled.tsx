@@ -1,4 +1,4 @@
-import { Text, Box, FlexBox } from 'spectacle';
+import { Text, Box, FlexBox } from '@repo/spectacle';
 
 const StyledText = ({ children, important, active, setCurrent }) => (
   <Text
@@ -8,8 +8,8 @@ const StyledText = ({ children, important, active, setCurrent }) => (
       active
         ? '#fc6986'
         : important
-        ? 'rgba(252, 105, 134, 0.5)'
-        : 'rgba(50,50,50,0.5)'
+          ? 'rgba(252, 105, 134, 0.5)'
+          : 'rgba(50,50,50,0.5)'
     }
     style={{ cursor: 'pointer' }}
     onClick={() => setCurrent(children)}

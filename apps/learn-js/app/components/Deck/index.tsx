@@ -36,7 +36,7 @@ export default function Deck({ title, length, type, cardTypes = '' }) {
             </ul>
           </div>
         )}
-        <Tag text="js" />
+        <Tag text="js" color="black" />
       </section>
       <section className={styles.Card_main}>
         <h3 className={styles.Card_title}>{title}</h3>

@@ -1,4 +1,4 @@
-import { FlexBox, Heading } from 'spectacle';
+import { FlexBox, Heading } from '@repo/spectacle';
 
 export const SlideHeader = ({
   heading = '',

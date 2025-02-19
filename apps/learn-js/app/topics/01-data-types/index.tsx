@@ -1,4 +1,4 @@
-import { Deck } from 'spectacle';
+import { Deck } from '@repo/spectacle';
 import { theme, template } from '../../components';
 
 import * as Types from './slides';

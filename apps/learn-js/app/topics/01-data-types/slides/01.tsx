@@ -1,4 +1,4 @@
-import { Notes } from 'spectacle';
+import { Notes } from '@repo/spectacle';
 import { DeckSection } from '../../../components';
 
 const SlideNotes = () => <Notes>С какими типами данных мы уже знакомы?</Notes>;

@@ -1,4 +1,4 @@
-import { Slide, Notes } from 'spectacle';
+import { Slide, Notes } from '@repo/spectacle';
 import { BookOpen, Code } from 'react-feather';
 
 export const DeckFirstSlide = ({ title, theory = [], practice = [] }) => (

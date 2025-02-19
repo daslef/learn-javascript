@@ -1,4 +1,4 @@
-import { UnorderedList, Text, ListItem, CodeSpan, CodePane } from 'spectacle';
+import { UnorderedList, Text, ListItem, CodeSpan, CodePane } from '@repo/spectacle';
 
 import tomorrow from 'react-syntax-highlighter/dist/cjs/styles/prism/tomorrow';
 

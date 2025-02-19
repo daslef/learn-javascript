@@ -1,4 +1,4 @@
-import { FlexBox, Text, Heading, Notes } from 'spectacle';
+import { FlexBox, Text, Heading, Notes } from '@repo/spectacle';
 import { DeckSlide } from '../../../components';
 
 const SlideNotes = () => (

@@ -1,5 +1,5 @@
 {
-  "name": "slides",
+  "name": "@learn/slides",
   "version": "0.2.0",
   "private": true,
   "sideEffects": false,
@@ -10,6 +10,7 @@
     "start": "vinxi start"
   },
   "dependencies": {
+    "@repo/spectacle": "*",
     "@tanstack/react-router": "^1.105.0",
     "@tanstack/start": "^1.105.3",
     "@tippyjs/react": "^4.2.6",
@@ -18,16 +19,17 @@
     "react-dom": "^19.0.0",
     "react-feather": "^2.0.10",
     "react-player": "^2.11.0",
-    "spectacle": "^9.6.0",
     "vinxi": "^0.5.3"
   },
   "devDependencies": {
+    "@repo/eslint-config": "*",
     "@tanstack/router-devtools": "^1.105.0",
     "@types/node": "^22.5.4",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
     "typescript": "^5.7.0",
-    "vite-tsconfig-paths": "^5.1.4"
+    "vite-tsconfig-paths": "^5.1.4",
+    "vite-plugin-svgr": "^4.3.0"
   }
 }

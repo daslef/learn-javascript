@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Text, FlexBox } from 'spectacle';
+import { Text, FlexBox } from '@repo/spectacle';
 import { SlideCodePane } from './index';
 
 const TabContent = ({ text, syntax, example, notes = null }) => (

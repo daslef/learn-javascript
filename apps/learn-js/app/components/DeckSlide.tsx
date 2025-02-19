@@ -1,4 +1,4 @@
-import { FlexBox, Slide } from 'spectacle';
+import { FlexBox, Slide } from '@repo/spectacle';
 import { SlideHeader } from '.';
 
 export const DeckSlide = ({

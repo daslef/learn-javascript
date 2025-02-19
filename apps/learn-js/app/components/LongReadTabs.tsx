@@ -1,4 +1,4 @@
-import { Text, FlexBox } from 'spectacle';
+import { Text, FlexBox } from '@repo/spectacle';
 import { SlideCodePane } from './index';
 
 const P = ({ children, ...props }) => (

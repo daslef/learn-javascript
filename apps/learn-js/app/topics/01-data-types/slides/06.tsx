@@ -16,11 +16,11 @@ import {
   Notes,
   ListItem,
   CodeSpan
-} from 'spectacle';
+} from '@repo/spectacle';
 
 import { DeckSlide, SlideCodePane } from '../../../components';
 
-import ArrowSvg from '../../../assets/svg/arrow.svg';
+import ArrowSvg from '../../../assets/svg/arrow.svg?react';
 
 const SlideNotes = () => (
   <Notes>
