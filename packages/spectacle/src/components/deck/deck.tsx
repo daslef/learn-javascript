@@ -30,7 +30,6 @@ import {
   printFrameStyle,
   printWrapperStyle
 } from './deck-styles';
-import { useAutoPlay } from '../../utils/use-auto-play';
 import defaultTheme, {
   SpectacleThemeOverrides
 } from '../../theme/default-theme';
@@ -43,7 +42,6 @@ export type DeckContextType = {
   slideCount: number;
   slideIds: SlideId[];
   useAnimations: boolean;
-  autoPlayLoop: boolean;
   navigationDirection: number;
   slidePortalNode: HTMLDivElement;
   onSlideClick(e: MouseEvent, slideId: SlideId): void;
@@ -153,9 +151,6 @@ export const DeckInternal = forwardRef<DeckRef, DeckInternalProps>(
         stepIndex: 0
       },
       suppressBackdropFallback = false,
-      autoPlay = false,
-      autoPlayLoop = false,
-      autoPlayInterval = 1000,
       transition = defaultTransition,
       backgroundImage
     },
@@ -255,12 +250,6 @@ export const DeckInternal = forwardRef<DeckRef, DeckInternalProps>(
       initializeTo(initialView);
     }, [initializeTo, syncLocation]);
 
-    useAutoPlay({
-      enabled: autoPlay,
-      loop: autoPlayLoop,
-      interval: autoPlayInterval,
-      stepForward
-    });
 
     const handleSlideClick = useCallback<
       NonNullable<DeckInternalProps['onSlideClick']>
@@ -277,30 +266,6 @@ export const DeckInternal = forwardRef<DeckRef, DeckInternalProps>(
 
     const fullyInitialized = initialized && slideIdsInitialized;
 
-    // Slides don't actually render their content to their position in the DOM-
-    // they render to this `portalNode` element. The only thing they actually
-    // render to their "natural" DOM location is a placeholder node which we use
-    // below to enumerate them.
-    //
-    // The main reason for this is so that we can be absolutely sure that no
-    // intermediate areas of the tree end up breaking styling, while still
-    // allowing users to organize their slides via component nesting:
-    //
-    //     const ContentSlides = () => (
-    //       <>
-    //         <Slide>First Slide</Slide>
-    //         <p>This text will never appear, because it's not part of a Slide.<p>
-    //         <Slide>Second Slide</Slide>
-    //       </>
-    //     );
-    //
-    //     const Presentation = () => (
-    //       <Deck>
-    //         <Slide>Title Slide</Slide>
-    //         <ContentSlides />
-    //         <Slide>Conclusion Slide</Slide>
-    //       </Deck>
-    //     );
     const [slidePortalNode, setSlidePortalNode] =
       useState<HTMLDivElement | null>();
 
@@ -340,15 +305,6 @@ export const DeckInternal = forwardRef<DeckRef, DeckInternalProps>(
       return {};
     }, [overviewMode, overviewScale, printMode, printScale]);
 
-    // Try to be intelligent about the backdrop background color: we have to use
-    // inline styles, which will take precedence over all other styles. So, we do
-    // as much as we can here to detect if a backdrop color has been provided, or
-    // if the user has provided a custom backdrop component (in which case they're
-    // responsible for styling it properly.) If we don't detect an appropriate
-    // case, then we apply the inline style.
-    //
-    // Yes, this is slightly awkward, but IMO adding an additional `<div>` element
-    // would be even more awkward.
     const backdropStyle = {
       ...themeProvidedBackdropStyle,
       ...userProvidedBackdropStyle
@@ -401,7 +357,6 @@ export const DeckInternal = forwardRef<DeckRef, DeckInternalProps>(
               onSlideClick: handleSlideClick,
               onMobileSlide: onMobileSlide,
               theme: restTheme,
-              autoPlayLoop,
               navigationDirection,
 
               frameOverrideStyle: frameStyle,
@@ -498,9 +453,6 @@ export type DeckProps = {
   id?: string | number;
   className?: string;
   children: ReactNode;
-  autoPlay?: boolean;
-  autoPlayLoop?: boolean;
-  autoPlayInterval?: number;
   theme?: SpectacleThemeOverrides & BackdropOverrides;
   template?: TemplateFn | ReactNode;
   printScale?: number;

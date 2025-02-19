@@ -32,7 +32,6 @@ export { default as FullScreen } from './components/fullscreen';
 export { default as SlideLayout } from './components/slide-layout';
 export { DefaultTemplate } from './components/default-template';
 
-export { default as SpectacleLogo } from './components/logo';
 export { removeNotes, isolateNotes } from './utils/notes';
 export { default as indentNormalizer } from './utils/indent-normalizer';
 export { DeckContext } from './components/deck/deck';

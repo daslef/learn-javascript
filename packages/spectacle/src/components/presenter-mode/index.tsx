@@ -8,7 +8,7 @@ import {
 } from 'react';
 import styled from 'styled-components';
 import { DeckInternal, DeckRef, TemplateFn } from '../deck/deck';
-import { Text, SpectacleLogo } from '../../index';
+import { Text } from '../../index';
 import {
   PresenterDeckContainer,
   NotesColumn,
@@ -63,7 +63,7 @@ const PresenterMode = (props: PresenterModeProps): ReactElement => {
       postMessage('SYNC', activeView);
       setShowFinalSlide(
         (deck.current?.numberOfSlides || 0) - 1 !==
-          deck?.current?.activeView.slideIndex
+        deck?.current?.activeView.slideIndex
       );
       previewDeck.current!.skipTo(endOfNextSlide(activeView));
     },
@@ -84,7 +84,6 @@ const PresenterMode = (props: PresenterModeProps): ReactElement => {
     <PresenterDeckContainer>
       <NotesColumn>
         <FlexBox justifyContent="space-between" paddingTop={15} paddingX={15}>
-          <SpectacleLogo size={60} />
           <FlexBox width={0.75} flexDirection="column" alignItems="flex-end">
             <Text
               data-testid="use-browser-tab-text"

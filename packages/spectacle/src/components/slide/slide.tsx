@@ -118,7 +118,6 @@ const Slide = (props: SlideProps): ReactElement => {
     onSlideClick = noop,
     onMobileSlide,
     useAnimations,
-    autoPlayLoop,
     navigationDirection,
     slidePortalNode,
     frameOverrideStyle = {},
@@ -215,20 +214,10 @@ const Slide = (props: SlideProps): ReactElement => {
 
     if (pendingView.stepIndex < 0) {
       setAnimate(false);
-
-      if (autoPlayLoop && activeView.slideIndex === 0) {
-        skipTo({ slideIndex: slideCount - 1, stepIndex: GOTO_FINAL_STEP });
-      } else {
-        regressSlide();
-      }
+      regressSlide();
     } else if (pendingView.stepIndex > finalStepIndex) {
       setAnimate(true);
-
-      if (autoPlayLoop && activeView.slideIndex === slideCount - 1) {
-        skipTo({ slideIndex: 0, stepIndex: 0 });
-      } else {
-        advanceSlide();
-      }
+      advanceSlide();
     } else if (pendingView.stepIndex === GOTO_FINAL_STEP) {
       setAnimate(false);
       commitTransition({
@@ -243,7 +232,6 @@ const Slide = (props: SlideProps): ReactElement => {
   }, [
     activeView,
     advanceSlide,
-    autoPlayLoop,
     commitTransition,
     finalStepIndex,
     navigationDirection,
@@ -259,7 +247,7 @@ const Slide = (props: SlideProps): ReactElement => {
   // Bounds checking for slides in the presentation.
   useEffect(() => {
     if (!willExit) return;
-    if (pendingView.slideId === undefined && !autoPlayLoop) {
+    if (pendingView.slideId === undefined) {
       setAnimate(false);
       cancelTransition();
     } else {
@@ -268,7 +256,6 @@ const Slide = (props: SlideProps): ReactElement => {
     }
   }, [
     activeView.slideIndex,
-    autoPlayLoop,
     cancelTransition,
     pendingView,
     navigationDirection,
